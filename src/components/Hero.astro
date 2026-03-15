@@ -1,0 +1,95 @@
+---
+const stats = [
+  { value: '10+', label: 'Years of Expertise' },
+  { value: '5+', label: 'Projects Shipped' },
+  { value: '100%', label: 'Client Satisfaction' },
+];
+---
+
+<section
+  id="home"
+  class="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#080b12]"
+>
+  <!-- Animated gradient orbs -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div
+      class="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full opacity-20"
+      style="background: radial-gradient(circle, #6366f1 0%, transparent 70%); animation: pulse-slow 8s ease-in-out infinite;"
+    ></div>
+    <div
+      class="absolute -bottom-60 -left-40 w-[600px] h-[600px] rounded-full opacity-15"
+      style="background: radial-gradient(circle, #22d3ee 0%, transparent 70%); animation: pulse-slow 10s ease-in-out infinite 2s;"
+    ></div>
+    <!-- Grid overlay -->
+    <div
+      class="absolute inset-0 opacity-[0.04]"
+      style="background-image: linear-gradient(#818cf8 1px, transparent 1px), linear-gradient(to right, #818cf8 1px, transparent 1px); background-size: 72px 72px;"
+    ></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-24">
+    <div class="max-w-4xl">
+      <!-- Eyebrow badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm font-medium mb-8">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        Software Consulting &amp; Engineering
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-white mb-8">
+        We build software<br />
+        that <span class="gradient-text">moves the needle.</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl mb-12">
+        Caracara Software partners with startups and growing companies to design, build,
+        and ship high-quality web products — from zero to launch, and beyond.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap gap-4 mb-20">
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white transition-all duration-200 shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-400/40 hover:-translate-y-0.5"
+        >
+          Start a Project
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a
+          href="#portfolio"
+          class="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold rounded-xl border border-white/20 text-white hover:bg-white/10 hover:border-white/30 transition-all duration-200 hover:-translate-y-0.5"
+        >
+          View Our Work
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-8 border-t border-white/10">
+        {
+          stats.map((stat) => (
+            <div>
+              <div class="text-3xl font-extrabold text-white mb-1">{stat.value}</div>
+              <div class="text-sm text-slate-500">{stat.label}</div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+    <span class="text-xs tracking-widest uppercase text-slate-500">Scroll</span>
+    <div class="w-px h-10 bg-gradient-to-b from-slate-500 to-transparent"></div>
+  </div>
+</section>
+
+<style>
+  @keyframes pulse-slow {
+    0%, 100% { transform: scale(1); opacity: 0.15; }
+    50% { transform: scale(1.1); opacity: 0.25; }
+  }
+</style>

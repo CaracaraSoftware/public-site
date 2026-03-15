@@ -1,0 +1,171 @@
+---
+const services = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>`,
+    tag: 'Design & Engineering',
+    title: 'Web Application Design & Build',
+    description:
+      'From concept to production-ready product. We design and engineer web applications that are fast, accessible, and built for growth',
+    bullets: [
+      'UI/UX design and prototyping',
+      'Full-stack web development',
+      'API design and integrations',
+      'Performance & accessibility optimization',
+      'Ongoing support and iteration',
+    ],
+    accent: 'from-indigo-500/20 to-indigo-600/5',
+    border: 'border-indigo-500/20',
+    iconBg: 'bg-indigo-500/15 border-indigo-500/25 text-indigo-400',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
+    tag: 'Product Development',
+    title: 'MVP Development',
+    description:
+      'Turn your idea into a real, shippable product fast. We help founders test assumptions, validate with real users, and launch before the competition.',
+    bullets: [
+      'Rapid prototyping and scoping',
+      'Focus on core user value',
+      'Launch-ready in weeks, not months',
+      'Scalable architecture from day one',
+      'Post-launch feedback integration',
+    ],
+    accent: 'from-cyan-500/20 to-cyan-600/5',
+    border: 'border-cyan-500/20',
+    iconBg: 'bg-cyan-500/15 border-cyan-500/25 text-cyan-400',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>`,
+    tag: 'Scaling',
+    title: 'Helping Startups Scale',
+    description:
+      "Hypergrowth is exciting until your infrastructure can't keep up. We step in to help engineering teams handle increasing load, complexity, and team size without losing velocity.",
+    bullets: [
+      'Architecture review and refactoring',
+      'Load testing',
+      'Database performance optimization',
+      'Team process and workflow improvements',
+    ],
+    accent: 'from-violet-500/20 to-violet-600/5',
+    border: 'border-violet-500/20',
+    iconBg: 'bg-violet-500/15 border-violet-500/25 text-violet-400',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`,
+    tag: 'Modernization',
+    title: 'Modernizing Legacy Systems',
+    description:
+      "Most companies reach a point where their initial codebase is no longer equipped for the demands of where the business is going. We help teams modernize incrementally and transition to an architecture built for longevity.",
+    bullets: [
+      'Incremental refactoring with zero downtime',
+      'Dependency upgrades and security hardening',
+      'Documentation and knowledge transfer',
+      'Code and architecture audits',
+    ],
+    accent: 'from-amber-500/20 to-amber-600/5',
+    border: 'border-amber-500/20',
+    iconBg: 'bg-amber-500/15 border-amber-500/25 text-amber-400',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>`,
+    tag: 'AI & Automation',
+    title: 'Embed AI into Your Workflows',
+    description:
+      "AI isn't magic \u2014 but applied correctly, it's a serious competitive advantage. We help engineering teams understand, adopt, and integrate AI tools and models into their day-to-day workflows.",
+    bullets: [
+      'AI tooling assessment and strategy',
+      'LLM integration',
+      'Developer tooling setup',
+      'Team training and change management',
+    ],
+    accent: 'from-emerald-500/20 to-emerald-600/5',
+    border: 'border-emerald-500/20',
+    iconBg: 'bg-emerald-500/15 border-emerald-500/25 text-emerald-400',
+  },
+];
+---
+
+<section id="services" class="section-padding bg-[#080b12] relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full opacity-5"
+      style="background: radial-gradient(circle, #6366f1 0%, transparent 70%);" />
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Header -->
+    <div class="flex items-center gap-3 mb-6">
+      <span class="w-8 h-px bg-indigo-500"></span>
+      <span class="text-xs font-semibold tracking-widest uppercase text-indigo-400">What We Do</span>
+    </div>
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight max-w-xl">
+        Expert services,<br />
+        <span class="gradient-text">tailored to your stage.</span>
+      </h2>
+      <p class="text-slate-400 max-w-sm leading-relaxed">
+        Whether you're pre-launch or managing legacy systems, we meet you where you are and help you get to the next level.
+      </p>
+    </div>
+
+    <!-- Services grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        services.map((service, i) => (
+          <div
+            class={`group relative p-7 rounded-2xl bg-gradient-to-br ${service.accent} border ${service.border} card-hover`}
+            style={i === 4 ? 'grid-column: span 1;' : ''}
+          >
+            <!-- Icon -->
+            <div class={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 ${service.iconBg}`} set:html={service.icon} />
+
+            <!-- Tag -->
+            <span class="text-xs font-semibold tracking-wider uppercase text-slate-500 mb-2 block">
+              {service.tag}
+            </span>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-white mb-3 leading-snug group-hover:text-indigo-200 transition-colors duration-200">
+              {service.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              {service.description}
+            </p>
+
+            <!-- Bullets -->
+            <ul class="space-y-2">
+              {service.bullets.map((bullet) => (
+                <li class="flex items-start gap-2.5 text-sm text-slate-400">
+                  <svg class="w-4 h-4 mt-0.5 shrink-0 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+
+      <!-- CTA Card -->
+      <div class="relative p-7 rounded-2xl border border-indigo-500/30 bg-indigo-500/10 flex flex-col items-start justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-white mb-3">Not sure where to start?</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Book a free 30-minute discovery call. We'll listen to your situation and tell you honestly how we can help.
+          </p>
+        </div>
+        <a
+          href="#contact"
+          class="mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white transition-all duration-200 shadow-lg shadow-indigo-500/25 hover:-translate-y-0.5"
+        >
+          Book a Free Call
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

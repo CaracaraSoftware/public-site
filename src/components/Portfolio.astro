@@ -1,0 +1,113 @@
+---
+const projects = [
+    {
+    category: 'Web App Design & Build',
+    title: 'Vasey Embroidery - E-commerce platform',
+    description:
+      'Designed and built a full-featured application for a textile artist to market and sell their work.',
+    tags: ['React', 'Ruby on Rails', 'Stripe', 'GCP'],
+    outcome: 'Launched in under 2 weeks',
+    visual: 'from-indigo-900/40 to-slate-900/60',
+    accentColor: 'text-indigo-400',
+    borderColor: 'border-indigo-500/20',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>`,
+    featured: false,
+  },
+  {
+    category: 'MVP Development',
+    title: 'Coming soon!',
+    description:
+      'Check back soon for a description of our latest project',
+    tags: [],
+    outcome: '',
+    visual: 'from-cyan-900/40 to-slate-900/60',
+    accentColor: 'text-cyan-400',
+    borderColor: 'border-cyan-500/20',
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>`,
+    featured: false,
+  },
+];
+---
+
+<section id="portfolio" class="section-padding bg-[#0a0d16] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <!-- Header -->
+    <div class="flex items-center gap-3 mb-6">
+      <span class="w-8 h-px bg-indigo-500"></span>
+      <span class="text-xs font-semibold tracking-widest uppercase text-indigo-400">Portfolio</span>
+    </div>
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-16">
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight max-w-xl">
+        Work we're<br />
+        <span class="gradient-text">proud to show off.</span>
+      </h2>
+      <p class="text-slate-400 max-w-sm leading-relaxed">
+        A selection of projects that showcase the range of problems we've tackled and the outcomes we've delivered.
+      </p>
+    </div>
+
+    <!-- Project Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {
+        projects.map((project) => (
+          <div class={`group relative p-8 rounded-2xl bg-gradient-to-br ${project.visual} border ${project.borderColor} card-hover overflow-hidden`}>
+            {project.featured && (
+              <div class="absolute top-6 right-6 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-semibold text-white">
+                Featured
+              </div>
+            )}
+
+            <!-- Category + Icon -->
+            <div class="flex items-center gap-3 mb-6">
+              <div class={`w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center ${project.accentColor}`} set:html={project.icon} />
+              <span class={`text-xs font-semibold tracking-wider uppercase ${project.accentColor}`}>
+                {project.category}
+              </span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+              {project.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              {project.description}
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mb-6">
+              {project.tags.map((tag) => (
+                <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs text-slate-400 font-medium">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <!-- Outcome -->
+            <div class={`flex items-center gap-2 text-sm font-semibold ${project.accentColor}`}>
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+              {project.outcome}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 text-center">
+      <p class="text-slate-500 mb-6">Interested in seeing more or discussing a similar project?</p>
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white transition-all duration-200 shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-400/40 hover:-translate-y-0.5"
+      >
+        Let's Talk
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
