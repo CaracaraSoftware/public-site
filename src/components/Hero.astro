@@ -54,7 +54,7 @@ const stats = [
           class="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white transition-all duration-200 shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-400/40 hover:-translate-y-0.5"
         >
           Start a Project
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
@@ -67,21 +67,21 @@ const stats = [
       </div>
 
       <!-- Stats -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-8 border-t border-white/10">
+      <dl class="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-8 border-t border-white/10">
         {
           stats.map((stat) => (
             <div>
-              <div class="text-3xl font-extrabold text-white mb-1">{stat.value}</div>
-              <div class="text-sm text-slate-500">{stat.label}</div>
+              <dd class="text-3xl font-extrabold text-white mb-1">{stat.value}</dd>
+              <dt class="text-sm text-slate-500">{stat.label}</dt>
             </div>
           ))
         }
-      </div>
+      </dl>
     </div>
   </div>
 
   <!-- Scroll indicator -->
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+  <div aria-hidden="true" class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
     <span class="text-xs tracking-widest uppercase text-slate-500">Scroll</span>
     <div class="w-px h-10 bg-gradient-to-b from-slate-500 to-transparent"></div>
   </div>

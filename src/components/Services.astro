@@ -116,7 +116,7 @@ const services = [
             style={i === 4 ? 'grid-column: span 1;' : ''}
           >
             <!-- Icon -->
-            <div class={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 ${service.iconBg}`} set:html={service.icon} />
+            <div class={`w-12 h-12 rounded-xl border flex items-center justify-center mb-5 ${service.iconBg}`} aria-hidden="true" set:html={service.icon} />
 
             <!-- Tag -->
             <span class="text-xs font-semibold tracking-wider uppercase text-slate-500 mb-2 block">
@@ -137,7 +137,7 @@ const services = [
             <ul class="space-y-2">
               {service.bullets.map((bullet) => (
                 <li class="flex items-start gap-2.5 text-sm text-slate-400">
-                  <svg class="w-4 h-4 mt-0.5 shrink-0 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg aria-hidden="true" class="w-4 h-4 mt-0.5 shrink-0 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                   {bullet}
@@ -161,7 +161,7 @@ const services = [
           class="mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white transition-all duration-200 shadow-lg shadow-indigo-500/25 hover:-translate-y-0.5"
         >
           Book a Free Call
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>

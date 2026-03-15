@@ -59,7 +59,7 @@ const projects = [
 
             <!-- Category + Icon -->
             <div class="flex items-center gap-3 mb-6">
-              <div class={`w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center ${project.accentColor}`} set:html={project.icon} />
+              <div class={`w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center ${project.accentColor}`} aria-hidden="true" set:html={project.icon} />
               <span class={`text-xs font-semibold tracking-wider uppercase ${project.accentColor}`}>
                 {project.category}
               </span>
@@ -86,7 +86,7 @@ const projects = [
 
             <!-- Outcome -->
             <div class={`flex items-center gap-2 text-sm font-semibold ${project.accentColor}`}>
-              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
               </svg>
               {project.outcome}
@@ -104,7 +104,7 @@ const projects = [
         class="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white transition-all duration-200 shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-400/40 hover:-translate-y-0.5"
       >
         Let's Talk
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </a>
